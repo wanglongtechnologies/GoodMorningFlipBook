@@ -9,9 +9,24 @@
     <link type="text/css" rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body class="overflow-hidden bg-white m-0 p-0">
-    <div class="overflow-hidden w-full h-full">
-      <div class="absolute top-1/2 left-1/2 m-auto">
-        <div id="fb" class="w-[--fb-width] h-[--fb-height] left-[--fb-left] top-[--fb-top]"></div>
+    <div class="h-full w-full overflow-hidden">
+      <div class="absolute left-1/2 top-1/2 m-auto">
+        <div id="fb" class="left-[--fb-left] top-[--fb-top] h-[--fb-height] w-[--fb-width]"></div>
+      </div>
+
+      <div class="absolute bottom-0 z-[99999] flex h-11 w-full items-center gap-4 bg-gray-400 px-4 text-white">
+        <button id="btnPrevious" type="button" class="cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+          </svg>
+        </button>
+        <button id="btnNext" type="button" class="cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+          </svg>
+        </button>
+        <p><span id="spanCurrent"></span>/<span id="spanTotal"></span></p>
+        <input id="inputSlider" type="range" class="h-1 flex-1 cursor-pointer appearance-none rounded-lg bg-white" />
       </div>
     </div>
 
